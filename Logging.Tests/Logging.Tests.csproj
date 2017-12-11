@@ -57,8 +57,12 @@
   <ItemGroup>
     <Compile Include="Client\LoggerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\LoggingServiceTest.cs" />
+    <Compile Include="Shared\CircularBufferTest.cs" />
+    <Compile Include="Shared\LogMessageTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

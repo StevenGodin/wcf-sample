@@ -11,7 +11,7 @@ namespace Logging.Services
 		void LogMessage(LogMessage message);
 
 		[OperationContract]
-		List<LogMessage> DumpLog(LogLevel logLevel);
+		List<LogMessage> DumpLog(LogLevel minLogLevel);
 
 		[OperationContract]
 		void ClearLog();

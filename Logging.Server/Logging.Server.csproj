@@ -54,6 +54,10 @@
       <Project>{26f4fee8-ce04-4f60-8556-aff46db77887}</Project>
       <Name>Logging.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Logging.Shared\Logging.Shared.csproj">
+      <Project>{D453EF99-89D1-4906-89E2-87C5CF8B70DD}</Project>
+      <Name>Logging.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

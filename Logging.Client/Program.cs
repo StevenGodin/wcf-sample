@@ -19,13 +19,17 @@ namespace Logging.Client
 			var exit = false;
 			while (!exit)
 			{
+				// Get command from the user
 				Console.Write("> ");
 				var cmdLine = Console.ReadLine();
 				if (cmdLine == null)
 					continue;
 
+				// Parse the command and message from the input string
 				var cmd = cmdLine.Split(' ').First();
 				var message = cmdLine.Substring(cmd.Length).Trim();
+
+				// Execute the specified command
 				switch (cmd)
 				{
 					case "help":
@@ -49,6 +53,8 @@ namespace Logging.Client
 						if (Enum.TryParse(message, true, out LogLevel level))
 						{
 							var logs = client.DumpLog(level);
+							if (!logs.Any())
+								Console.WriteLine(string.Empty);
 							foreach (var log in logs)
 								Console.WriteLine(log);
 						}

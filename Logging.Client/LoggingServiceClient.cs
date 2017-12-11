@@ -12,9 +12,9 @@ namespace Logging.Client
 			Channel.LogMessage(message);
 		}
 
-		public List<LogMessage> DumpLog(LogLevel logLevel)
+		public List<LogMessage> DumpLog(LogLevel minLogLevel)
 		{
-			return Channel.DumpLog(logLevel);
+			return Channel.DumpLog(minLogLevel);
 		}
 
 		public void ClearLog()
