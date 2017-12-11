@@ -13,5 +13,10 @@ namespace Logging.Shared
 
 		[DataMember]
 		public string Message { get; set; }
+
+		public override string ToString()
+		{
+			return $"{ClientId} [{LogLevel}]: {Message}";
+		}
 	}
 }
